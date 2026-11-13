@@ -1,0 +1,228 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Codex Usage Limit Official Table</title>
+    <link rel="canonical" href="https://usagecaptable.com/codex-usage-limit/" />
+    <style>
+      :root {
+        color-scheme: light;
+        --ink: #17191f;
+        --muted: #5b6472;
+        --line: #d9dde5;
+        --soft: #f5f7fa;
+        --soft-2: #eef7f4;
+        --accent: #0f766e;
+        --accent-dark: #115e59;
+        --gap: #fff5cc;
+      }
+
+      * { box-sizing: border-box; }
+
+      body {
+        margin: 0;
+        color: var(--ink);
+        background: #ffffff;
+        font-family: Arial, Helvetica, sans-serif;
+      }
+
+      header {
+        padding: 22px 28px 16px;
+        border-bottom: 1px solid var(--line);
+      }
+
+      .answer {
+        max-width: 1120px;
+        margin: 0 0 12px;
+        font-size: clamp(23px, 3vw, 36px);
+        line-height: 1.18;
+        font-weight: 800;
+        letter-spacing: 0;
+      }
+
+      .subline {
+        max-width: 980px;
+        margin: 0;
+        color: var(--muted);
+        font-size: 16px;
+        line-height: 1.5;
+      }
+
+      .bar, .related-pages {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        gap: 10px 14px;
+        margin-top: 16px;
+        font-size: 14px;
+        color: var(--muted);
+      }
+
+      .button, .related-pages a {
+        display: inline-flex;
+        min-height: 40px;
+        align-items: center;
+        justify-content: center;
+        padding: 0 14px;
+        border: 1px solid var(--accent-dark);
+        border-radius: 6px;
+        background: var(--accent);
+        color: #ffffff;
+        font-weight: 700;
+        text-decoration: none;
+      }
+
+      .secondary, .related-pages a {
+        border-color: var(--line);
+        background: #ffffff;
+        color: var(--accent-dark);
+      }
+
+      main { padding: 18px 28px 30px; }
+
+      .table-frame {
+        border: 1px solid var(--line);
+        border-radius: 6px;
+        overflow: auto;
+        background: #ffffff;
+      }
+
+      table {
+        width: 100%;
+        min-width: 1120px;
+        border-collapse: collapse;
+        font-size: 14px;
+        line-height: 1.35;
+      }
+
+      caption {
+        padding: 12px 14px;
+        text-align: left;
+        background: var(--soft-2);
+        border-bottom: 1px solid var(--line);
+        font-weight: 800;
+      }
+
+      th, td {
+        padding: 10px 12px;
+        border-right: 1px solid var(--line);
+        border-bottom: 1px solid var(--line);
+        vertical-align: top;
+        text-align: left;
+      }
+
+      th {
+        position: sticky;
+        top: 0;
+        z-index: 1;
+        background: #edf2f5;
+        white-space: nowrap;
+      }
+
+      tbody th {
+        position: static;
+        background: #ffffff;
+        font-weight: 800;
+      }
+
+      td:last-child, th:last-child { border-right: 0; }
+      tr:last-child td, tr:last-child th { border-bottom: 0; }
+      .not-published { background: var(--gap); font-weight: 700; }
+
+      .sources, .backup {
+        margin-top: 20px;
+        max-width: 1120px;
+      }
+
+      .sources h2, .backup h2 {
+        font-size: 18px;
+        margin: 0 0 10px;
+      }
+
+      .sources ol {
+        margin: 0;
+        padding-left: 22px;
+        color: var(--muted);
+        line-height: 1.55;
+      }
+
+      .sources a { color: var(--accent-dark); }
+      footer {
+        margin-top: 24px;
+        padding-top: 16px;
+        border-top: 1px solid var(--line);
+        color: var(--muted);
+        font-size: 13px;
+      }
+
+      @media (max-width: 720px) {
+        header, main { padding-left: 16px; padding-right: 16px; }
+        .answer { font-size: 25px; }
+        table { min-width: 900px; }
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1 class="answer">OpenAI publishes Codex usage as plan-based allowances, model-specific local-message estimates per five-hour period, and account-specific reset information in the dashboard, not as one fixed message count.</h1>
+      <p class="subline">Codex Usage Limit Official Table. Scraped on 2026-09-14. The table keeps values and source IDs separate so the numbers stay readable while each row remains traceable.</p>
+      <div class="bar">
+        <span>Scraped date: 2026-09-14</span>
+        <a class="button" href="./codex-usage-limit.csv" download>Download clean CSV</a>
+        <a class="button secondary" href="./codex-usage-limit-full-citations.csv" download>Download full citations CSV</a>
+      </div>
+      <nav class="related-pages" aria-label="Related limit tables">
+        <a href="../">Claude usage limit</a>
+        <a href="../codex-usage-limit/">Codex usage limit</a>
+        <a href="../claude-code-usage-limit/">Claude Code usage limit</a>
+        <a href="../gemini-usage-limit/">Gemini usage limit</a>
+      </nav>
+    </header>
+    <main>
+      <div class="table-frame">
+        <table>
+          <caption>Codex Usage Limit Official Table</caption>
+          <thead><tr><th>Area</th><th>Official item</th><th>Published value</th><th>Window or reset</th><th>Source ID</th></tr></thead>
+          <tbody>
+<tr><th>Plans</th><td>Free</td><td>$0/month</td><td>Usage limits vary by plan</td><td>O2</td></tr>
+<tr><th>Plans</th><td>Go</td><td>$8/month</td><td>Usage limits vary by plan</td><td>O2</td></tr>
+<tr><th>Plans</th><td>Plus</td><td>$20/month</td><td>Usage limits vary by plan</td><td>O2</td></tr>
+<tr><th>Plans</th><td>Pro</td><td>From $100/month</td><td>5x or 20x higher rate limits than Plus</td><td>O2</td></tr>
+<tr><th>Plans</th><td>Business</td><td>$20/user/month billed annually; $25/user/month billed monthly</td><td>Standard Business local-message estimates match Plus table values</td><td>O2</td></tr>
+<tr><th>Plans</th><td>Enterprise and Edu</td><td>Contact sales</td><td>Flexible pricing has no fixed rate limits; usage scales with credits</td><td>O2</td></tr>
+<tr><th>API key</th><td>Codex through CLI, SDK, or IDE extension</td><td>Usage-based API pricing</td><td>No cloud-based Codex features</td><td>O2</td></tr>
+<tr><th>Local-message estimate</th><td>GPT-6 Astra on Plus</td><td>5-45 local messages</td><td>Per five-hour period</td><td>O2</td></tr>
+<tr><th>Local-message estimate</th><td>GPT-6 Astra on Pro 5x</td><td>25-225 local messages</td><td>Per five-hour period</td><td>O2</td></tr>
+<tr><th>Local-message estimate</th><td>GPT-6 Astra on Pro 20x</td><td>100-900 local messages</td><td>Per five-hour period</td><td>O2</td></tr>
+<tr><th>Local-message estimate</th><td>GPT-5.6 Sol on Plus</td><td>10-100 local messages</td><td>Per five-hour period</td><td>O2</td></tr>
+<tr><th>Local-message estimate</th><td>GPT-5.6 Sol on Pro 5x</td><td>50-500 local messages</td><td>Per five-hour period</td><td>O2</td></tr>
+<tr><th>Local-message estimate</th><td>GPT-5.6 Sol on Pro 20x</td><td>200-2,000 local messages</td><td>Per five-hour period</td><td>O2</td></tr>
+<tr><th>Local-message estimate</th><td>GPT-5.6 Terra on Plus</td><td>25-200 local messages</td><td>Per five-hour period</td><td>O2</td></tr>
+<tr><th>Local-message estimate</th><td>GPT-5.6 Terra on Pro 5x</td><td>125-1,000 local messages</td><td>Per five-hour period</td><td>O2</td></tr>
+<tr><th>Local-message estimate</th><td>GPT-5.6 Terra on Pro 20x</td><td>500-4,000 local messages</td><td>Per five-hour period</td><td>O2</td></tr>
+<tr><th>Local-message estimate</th><td>GPT-5.6 Luna on Plus</td><td>250-2,000 local messages</td><td>Per five-hour period</td><td>O2</td></tr>
+<tr><th>Local-message estimate</th><td>GPT-5.6 Luna on Pro 5x</td><td>1,250-10,000 local messages</td><td>Per five-hour period</td><td>O2</td></tr>
+<tr><th>Local-message estimate</th><td>GPT-5.6 Luna on Pro 20x</td><td>5,000-40,000 local messages</td><td>Per five-hour period</td><td>O2</td></tr>
+<tr><th>Shared allowance</th><td>ChatGPT Work and Codex</td><td>Shared usage allowance</td><td>Local messages and cloud chats share the allowance; weekly limits may apply</td><td>O1, O2</td></tr>
+<tr><th>Current account limit</th><td>Remaining limit and reset time</td><td class="not-published">Not published by OpenAI</td><td>Check the usage dashboard or /status in an active Codex CLI session</td><td>O1, O2</td></tr>
+<tr><th>Usage reporting</th><td>Current Work or Codex chat totals</td><td>Refreshes about once per minute</td><td>Chat-level usage is an estimate and may omit some billable activity</td><td>O3</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <section class="sources">
+        <h2>Source Map</h2>
+        <ol>
+<li><strong>O1.</strong> <a href="https://help.openai.com/en/articles/11369540-using-codex-with-your-chatgpt-plan">Using Codex with your ChatGPT plan</a>: Usage limits by plan.</li>
+<li><strong>O2.</strong> <a href="https://learn.chatgpt.com/docs/pricing">Pricing</a>: Pricing options; What are the usage limits for my plan?.</li>
+<li><strong>O3.</strong> <a href="https://help.openai.com/en/articles/20001478-reviewing-work-and-codex-usage-and-using-personal-analytics-in-chatgpt-desktop">Reviewing Work and Codex usage and using Personal Analytics in ChatGPT Desktop</a>: Check monthly usage; Review usage for a single Work or Codex chat.</li>
+        </ol>
+      </section>
+      <section class="backup">
+        <h2>Full-Citation Backup</h2>
+        <p class="subline">The full-citation CSV keeps the same rows with page title, URL, section, and evidence note for checking or rebuilding the table.</p>
+      </section>
+      <footer>Data comes from official first-party documentation only. Cells marked as not published are intentionally left unfilled rather than copied from third-party blogs, forums, or estimates.</footer>
+    </main>
+  </body>
+</html>

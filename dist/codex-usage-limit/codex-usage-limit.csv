@@ -1,0 +1,23 @@
+Area,Official item,Published value,Window or reset,Source ID
+Plans,Free,$0/month,Usage limits vary by plan,O2
+Plans,Go,$8/month,Usage limits vary by plan,O2
+Plans,Plus,$20/month,Usage limits vary by plan,O2
+Plans,Pro,From $100/month,5x or 20x higher rate limits than Plus,O2
+Plans,Business,$20/user/month billed annually; $25/user/month billed monthly,Standard Business local-message estimates match Plus table values,O2
+Plans,Enterprise and Edu,Contact sales,Flexible pricing has no fixed rate limits; usage scales with credits,O2
+API key,"Codex through CLI, SDK, or IDE extension",Usage-based API pricing,No cloud-based Codex features,O2
+Local-message estimate,GPT-6 Astra on Plus,5-45 local messages,Per five-hour period,O2
+Local-message estimate,GPT-6 Astra on Pro 5x,25-225 local messages,Per five-hour period,O2
+Local-message estimate,GPT-6 Astra on Pro 20x,100-900 local messages,Per five-hour period,O2
+Local-message estimate,GPT-5.6 Sol on Plus,10-100 local messages,Per five-hour period,O2
+Local-message estimate,GPT-5.6 Sol on Pro 5x,50-500 local messages,Per five-hour period,O2
+Local-message estimate,GPT-5.6 Sol on Pro 20x,"200-2,000 local messages",Per five-hour period,O2
+Local-message estimate,GPT-5.6 Terra on Plus,25-200 local messages,Per five-hour period,O2
+Local-message estimate,GPT-5.6 Terra on Pro 5x,"125-1,000 local messages",Per five-hour period,O2
+Local-message estimate,GPT-5.6 Terra on Pro 20x,"500-4,000 local messages",Per five-hour period,O2
+Local-message estimate,GPT-5.6 Luna on Plus,"250-2,000 local messages",Per five-hour period,O2
+Local-message estimate,GPT-5.6 Luna on Pro 5x,"1,250-10,000 local messages",Per five-hour period,O2
+Local-message estimate,GPT-5.6 Luna on Pro 20x,"5,000-40,000 local messages",Per five-hour period,O2
+Shared allowance,ChatGPT Work and Codex,Shared usage allowance,Local messages and cloud chats share the allowance; weekly limits may apply,"O1, O2"
+Current account limit,Remaining limit and reset time,Not published by OpenAI,Check the usage dashboard or /status in an active Codex CLI session,"O1, O2"
+Usage reporting,Current Work or Codex chat totals,Refreshes about once per minute,Chat-level usage is an estimate and may omit some billable activity,O3

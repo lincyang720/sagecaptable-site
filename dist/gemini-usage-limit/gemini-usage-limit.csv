@@ -1,0 +1,27 @@
+Surface,Official item,Published value,Window or reset,Source ID
+Gemini app,Google AI Plus price,$4.99/month,2x higher usage access than Free,G1
+Gemini app,Google AI Plus Gemini app limit,2x higher usage limits than Free,Compute-based access,G1
+Gemini app,Google AI Pro price,$19.99/month,4x higher usage access than Free,G1
+Gemini app,Google AI Pro Gemini app limit,4x higher usage limits than Free,Compute-based access,G1
+Gemini app,Google AI Ultra 5x price,$99.99/month,5x higher usage limits vs. AI Pro,G1
+Gemini app,Google AI Ultra 20x price,$199.99/month,20x higher usage limits vs. AI Pro,G1
+Gemini app,Google AI Ultra Gemini app limit,Up to 20x higher usage limits than Pro,Compute-based access,G1
+Gemini app,Limit calculation,Not published by Google,"Depends on prompt complexity, features used, and chat length",G1
+Gemini app,Refresh cadence,Every 5 hours until the weekly limit is reached,Limits can be extended with AI credits,G1
+Gemini app,Weekly numeric cap,Not published by Google,Google confirms a weekly limit but not a universal numeric cap,G1
+Gemini API,Free tier requirement,Active project or free trial,Rate limit details are checked in AI Studio,G2
+Gemini API,Tier 1 requirement,$10 paid and $250 Cloud Billing cap,Spend-based tier,G2
+Gemini API,Tier 2 requirement,"$100 paid plus 3 days since successful payment; $2,000 Cloud Billing cap",Spend-based tier,G2
+Gemini API,Tier 3 requirement,"$1,000 paid plus 30 days since successful payment; $20,000-$100,000+ Cloud Billing cap",Spend-based tier,G2
+Gemini API,Priority inference,0.3x standard rate limits by default,Separate from Batch API,G2
+Batch API,Concurrent batch requests,100 requests,Batch API has separate limits from non-batch API calls,G2
+Batch API,Input file size limit,2GB,System limit,G2
+Batch API,File storage limit,20GB,System limit,G2
+Gemini for Google Cloud,Requests per second,2 requests per second,Per user in a project,G3
+Gemini for Google Cloud,Gemini Code Assist or BigQuery code requests,"6,000 requests per day",Per user in a project,G3
+Gemini for Google Cloud,Cloud Assist panel and IDE responses,960 requests per day,Per user in a project,G3
+Gemini Code Assist,Local codebase awareness,"1,000,000 token context window",System quota,G3
+Gemini Code Assist,Code customization repositories,"20,000 repositories",System quota,G3
+Gemini Code Assist agent mode and Gemini CLI,Standard edition,"1,500 requests per user per day",Quota resets when the quota resets,G3
+Gemini Code Assist agent mode and Gemini CLI,Enterprise edition,"2,000 requests per user per day",Quota resets when the quota resets,G3
+Gemini Code Assist on GitHub,Pull request reviews,At least 100 pull request reviews per day,Reset aligns with Google Cloud quota resets,G3

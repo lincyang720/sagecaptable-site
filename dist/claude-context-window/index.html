@@ -1,0 +1,212 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Claude Context Window: The Number, the Conversion, and the Failure Mode</title>
+    <link rel="canonical" href="https://usagecaptable.com/claude-context-window/" />
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='12' fill='%230f766e'/%3E%3Cpath d='M15 18h34v8H15zm0 14h34v8H15zm0 14h22v8H15z' fill='white'/%3E%3C/svg%3E" />
+    <style>
+      :root {
+        color-scheme: light;
+        --ink: #17191f;
+        --muted: #5b6472;
+        --line: #d9dde5;
+        --soft: #f5f7fa;
+        --soft-2: #eef7f4;
+        --accent: #0f766e;
+        --accent-dark: #115e59;
+      }
+
+      * { box-sizing: border-box; }
+
+      body {
+        margin: 0;
+        color: var(--ink);
+        background: #ffffff;
+        font-family: Arial, Helvetica, sans-serif;
+      }
+
+      header {
+        padding: 22px 28px 16px;
+        border-bottom: 1px solid var(--line);
+      }
+
+      .answer {
+        max-width: 1120px;
+        margin: 0 0 12px;
+        font-size: clamp(23px, 3vw, 36px);
+        line-height: 1.18;
+        font-weight: 800;
+        letter-spacing: 0;
+      }
+
+      .subline {
+        max-width: 980px;
+        margin: 0;
+        color: var(--muted);
+        font-size: 16px;
+        line-height: 1.5;
+      }
+
+      .related-pages {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        gap: 10px 14px;
+        margin-top: 16px;
+        font-size: 14px;
+        color: var(--muted);
+      }
+
+      .related-pages a {
+        display: inline-flex;
+        min-height: 40px;
+        align-items: center;
+        justify-content: center;
+        padding: 0 14px;
+        border: 1px solid var(--line);
+        border-radius: 6px;
+        background: #ffffff;
+        color: var(--accent-dark);
+        font-weight: 700;
+        text-decoration: none;
+      }
+
+      main {
+        padding: 18px 28px 30px;
+      }
+
+      article {
+        max-width: 900px;
+        font-size: 17px;
+        line-height: 1.68;
+      }
+
+      h2 {
+        margin: 28px 0 10px;
+        font-size: 23px;
+        line-height: 1.25;
+      }
+
+      p { margin: 0 0 16px; }
+
+      a { color: var(--accent-dark); }
+
+      pre {
+        overflow: auto;
+        margin: 14px 0 18px;
+        padding: 14px 16px;
+        border: 1px solid var(--line);
+        border-radius: 6px;
+        background: var(--soft);
+        color: #111827;
+        font-size: 14px;
+        line-height: 1.45;
+      }
+
+      code {
+        font-family: Consolas, "Liberation Mono", Menlo, monospace;
+      }
+
+      footer {
+        max-width: 900px;
+        margin-top: 28px;
+        padding-top: 16px;
+        border-top: 1px solid var(--line);
+        color: var(--muted);
+        font-size: 13px;
+      }
+
+      @media (max-width: 720px) {
+        header, main { padding-left: 16px; padding-right: 16px; }
+        .answer { font-size: 25px; }
+        article { font-size: 16px; line-height: 1.62; }
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1 class="answer">Claude Context Window: The Number, the Conversion, and the Failure Mode</h1>
+      <p class="subline">A practical reading of Claude context-window sizes, token-to-page conversion, and the failure modes that show up when a coding session gets too large.</p>
+      <nav class="related-pages" aria-label="Related limit tables">
+        <a href="../">Claude usage limit</a>
+        <a href="../codex-usage-limit/">Codex usage limit</a>
+        <a href="../claude-code-usage-limit/">Claude Code usage limit</a>
+        <a href="../gemini-usage-limit/">Gemini usage limit</a>
+        <a href="../chatgpt-usage-limit/">ChatGPT usage limit</a>
+      </nav>
+    </header>
+    <main>
+      <article>
+        <p>Claude's context window depends on where you use it. In Claude chat on paid plans, Anthropic's Help Center says Claude Opus 5 and Sonnet 5 support <code>1M</code> tokens; Claude Opus 4.8, Opus 4.7, Opus 4.6, and Sonnet 4.6 support <code>500K</code>; outside those models, the window is <code>200K</code>, which the same page describes as about <code>500 pages</code> of text or more. In the Claude API docs, the model-level answer is different: Fable 5.1, Mythos 5.1, Fable 5, Mythos 5, Opus 5, Opus 4.8, Opus 4.7, Opus 4.6, Sonnet 5, Sonnet 4.6, and Mythos Preview have a <code>1M</code> token context window; other Claude models, including Sonnet 4.5, have <code>200K</code>. In Claude Code, Anthropic's model-configuration page says Fable 5.1, Fable 5, Sonnet 5, Opus 4.6 and later, and Sonnet 4.6 support <code>1M</code> for long sessions, but availability varies by model and plan: Sonnet 4.6 requires usage credits on subscription plans, Pro users need usage credits for Opus <code>1M</code>, and Max, Team, and Enterprise include Opus <code>1M</code> with the subscription. Sources: <a href="https://support.claude.com/en/articles/8606394-how-large-is-the-context-window-on-paid-claude-plans">Claude Help Center</a>, <a href="https://platform.claude.com/docs/en/build-with-claude/context-windows">Claude Platform context windows</a>, and <a href="https://code.claude.com/docs/en/model-config">Claude Code model configuration</a>.</p>
+
+        <p>That size is the ceiling, not the amount you should try to stuff into one working session. In Claude Code, the context window is spent by your chat history, file reads, command output, tool schemas, MCP output, project instructions, and Claude's next answer. The Claude Academy page says every file read, command, and message takes space in the context window. Source: <a href="https://academy.claude.com/courses/claude-code-101/context-management">Claude Code context management</a>.</p>
+
+        <p>The first failure mode is a hard token error:</p>
+
+        <pre><code>Prompt is too long: 137500 tokens &gt; 135000 maximum</code></pre>
+
+        <p>When you see that, the next prompt is usually not the real problem. The real problem is the accumulated session: repeated file dumps, long logs, broad MCP outputs, or a project instruction file that keeps getting carried into every turn. Use <code>/context</code> before trying to compact anything. If <code>/context</code> shows old command output, unused tools, or noisy project instructions taking the space, remove that pressure first.</p>
+
+        <p>The second failure mode is worse because it hits the rescue tool itself:</p>
+
+        <pre><code>Error during compaction: Conversation too long. Press esc twice to go up a few messages and try again.</code></pre>
+
+        <p>That means <code>/compact</code> also needs room to read and summarize the current conversation. If the session has already grown past the recoverable range, compaction can fail before it produces the summary. The recovery order is: save the current task state, press Esc twice to move before the oversized turn, retry <code>/compact</code>, and if it still fails, start clean with <code>/clear</code> or a new session. Do not paste the full old transcript back in; that rebuilds the same failure.</p>
+
+        <p>A third version looks like an automatic reset:</p>
+
+        <pre><code>Context limit exceeded during compaction. I've reset our conversation to start fresh - please try again.</code></pre>
+
+        <p>or:</p>
+
+        <pre><code>auto-compaction could not recover this turn</code></pre>
+
+        <p>Treat that as a lost working buffer. Rebuild with a short handoff note: goal, files touched, commands already run, exact errors, current decision, and next action.</p>
+
+        <h2>Token to Words and Pages Conversion</h2>
+
+        <p>Use this as a feeling for size, not as a tokenizer guarantee.</p>
+
+        <pre><code>200K tokens ≈ 500 pages
+500K tokens ≈ 1,250 pages
+1M tokens ≈ 2,500 pages</code></pre>
+
+        <p>The page math uses Anthropic's Help Center statement that <code>200K</code> tokens is about <code>500 pages</code>, so one page is roughly <code>400 tokens</code>. The word math below is an estimate, not an official Anthropic ratio: if you use <code>1 token ≈ 0.75 English words</code> as the working conversion, then <code>200K ≈ 150,000 words</code>, <code>500K ≈ 375,000 words</code>, and <code>1M ≈ 750,000 words</code>. Code, tables, logs, JSON, and non-English text can use tokens very differently.</p>
+
+        <p>That is why a 1M window can still feel small in a coding session. Ten pasted stack traces, a few full-file reads, one verbose MCP server, and a long <code>CLAUDE.md</code> can burn space faster than normal prose. A clean <code>200K</code> session can outperform a polluted <code>1M</code> session.</p>
+
+        <p>Another trap is blaming Claude when the client is the bottleneck. If a Claude-compatible coding client suddenly acts like the context window shrank after an upgrade, check environment and client settings before blaming the model. A setting like this can change the effective context behavior:</p>
+
+        <pre><code>CLAUDE_CODE_DISABLE_1M_CONTEXT=1</code></pre>
+
+        <p>After changing it, restart the terminal or app session, then run <code>/context</code> again. Without the restart, the old environment can still be active.</p>
+
+        <p>Wrapper clients can also impose smaller limits than the backend model. A backend may support:</p>
+
+        <pre><code>128000</code></pre>
+
+        <p>while the client config still says:</p>
+
+        <pre><code>contextWindow: 16000</code></pre>
+
+        <p>Then the tool behaves like it has a short memory even when the model endpoint can accept more. Reserved-output settings can create the same false shortage. A value like:</p>
+
+        <pre><code>reserveTokensFloor: 50000</code></pre>
+
+        <p>can leave too little room for input. Changing it to a verified project value such as:</p>
+
+        <pre><code>reserveTokensFloor: 40000</code></pre>
+
+        <p>or using:</p>
+
+        <pre><code>reserveTokens: 32768</code></pre>
+
+        <p>only makes sense inside the client where those exact fields exist. These are not universal Claude limits. They are local budgeting knobs.</p>
+
+        <p>The stable workflow is simple: keep the main session narrow, check <code>/context</code> early, compact before the session is already broken, move bulky logs into short summaries, disable unused MCP tools, and restart cleanly when compaction itself fails. Claude context window is not only a model-size number. It is a working budget shared by the model, the coding client, the tools, the project instructions, and the recovery mechanism.</p>
+      </article>
+    </main>
+  </body>
+</html>

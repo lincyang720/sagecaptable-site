@@ -1,0 +1,20 @@
+Plan or surface,Official item,Published value,Reset or metering,Source ID
+Claude Code login,Claude Enterprise seat through /login,Included usage pool,Resets on a rolling window,A1
+Claude Code login,"API key through Console, Bedrock, Vertex, or Microsoft Foundry","Pay-as-you-go, billed per token",No hard stop; the account is charged for usage,A1
+Claude Code login,Running spend command for API-key use,/cost,Shows running spend for the current session,A1
+Model selection,Source of truth for available Claude Code models,/model,"Exact model names, versions, and availability change over time",A1
+Pro,Web subscription price,$20/month in the United States,Regional pricing may vary,A3
+Pro,Usage capacity,At least 5x the free service per session during peak hours,Session-based limit resets every five hours; weekly limit resets at a fixed account time,A3
+Max,Max 5x price,$100/month,Monthly subscription only,A4
+Max,Max 20x price,$200/month,Monthly subscription only,A4
+Max,Usage capacity,5x or 20x more usage than Pro,Shared Claude and Claude Code usage limits,"A4, A2"
+Team Standard,Seat price,$25/member/month monthly; $20/member/month annually,Minimum two members,A5
+Team Premium,Seat price,$125/member/month monthly; $100/member/month annually,Minimum two members,A5
+Team Standard,Usage capacity,1.25x more usage per session than Pro,Weekly limits reset at a fixed account time; per-member limits,A5
+Team Premium,Usage capacity,6.25x more usage per session than Pro,Weekly limits reset at a fixed account time; per-member limits,A5
+Team,Maximum seats before Enterprise upgrade,150 seats,Upgrade to Enterprise above that size,A5
+Enterprise,Seat fee,Access only,"All usage across Claude, Claude Code, and Cowork is billed separately at standard API rates",A6
+Enterprise,Included token allowance,Not published by Anthropic,Usage-based Enterprise has no included token allowance and no per-seat usage limits,A6
+Shared subscription usage,Pro and Max subscription use,Shared across Claude and Claude Code,"Wait for reset, enable usage credits, upgrade, or switch to API credits after hitting limits",A2
+Context window,Paid Claude plans in Claude Code for listed current models,Up to 1M tokens,Availability and usage-credit requirements depend on plan and model,A8
+Exact fixed message count,Messages per plan,Not published by Anthropic,"Varies by message length, files, conversation length, model, and feature","A3, A7"

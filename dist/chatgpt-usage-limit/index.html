@@ -1,0 +1,265 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>ChatGPT Usage Limit Official Table</title>
+    <link rel="canonical" href="https://usagecaptable.com/chatgpt-usage-limit/" />
+    <style>
+      :root {
+        color-scheme: light;
+        --ink: #17191f;
+        --muted: #5b6472;
+        --line: #d9dde5;
+        --soft: #f5f7fa;
+        --soft-2: #eef7f4;
+        --accent: #0f766e;
+        --accent-dark: #115e59;
+        --gap: #fff5cc;
+      }
+
+      * { box-sizing: border-box; }
+
+      body {
+        margin: 0;
+        color: var(--ink);
+        background: #ffffff;
+        font-family: Arial, Helvetica, sans-serif;
+      }
+
+      header {
+        padding: 22px 28px 16px;
+        border-bottom: 1px solid var(--line);
+      }
+
+      .answer {
+        max-width: 1120px;
+        margin: 0 0 12px;
+        font-size: clamp(23px, 3vw, 36px);
+        line-height: 1.18;
+        font-weight: 800;
+        letter-spacing: 0;
+      }
+
+      .subline {
+        max-width: 980px;
+        margin: 0;
+        color: var(--muted);
+        font-size: 16px;
+        line-height: 1.5;
+      }
+
+      .bar, .related-pages, .keyword-links {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        gap: 10px 14px;
+        margin-top: 16px;
+        font-size: 14px;
+        color: var(--muted);
+      }
+
+      .button, .related-pages a {
+        display: inline-flex;
+        min-height: 40px;
+        align-items: center;
+        justify-content: center;
+        padding: 0 14px;
+        border: 1px solid var(--accent-dark);
+        border-radius: 6px;
+        background: var(--accent);
+        color: #ffffff;
+        font-weight: 700;
+        text-decoration: none;
+      }
+
+      .secondary, .related-pages a {
+        border-color: var(--line);
+        background: #ffffff;
+        color: var(--accent-dark);
+      }
+
+      main { padding: 18px 28px 30px; }
+
+      .table-frame {
+        border: 1px solid var(--line);
+        border-radius: 6px;
+        overflow: auto;
+        background: #ffffff;
+      }
+
+      table {
+        width: 100%;
+        min-width: 1180px;
+        border-collapse: collapse;
+        font-size: 14px;
+        line-height: 1.35;
+      }
+
+      caption {
+        padding: 12px 14px;
+        text-align: left;
+        background: var(--soft-2);
+        border-bottom: 1px solid var(--line);
+        font-weight: 800;
+      }
+
+      th, td {
+        padding: 10px 12px;
+        border-right: 1px solid var(--line);
+        border-bottom: 1px solid var(--line);
+        vertical-align: top;
+        text-align: left;
+      }
+
+      th {
+        position: sticky;
+        top: 0;
+        z-index: 1;
+        background: #edf2f5;
+        white-space: nowrap;
+      }
+
+      tbody th {
+        position: static;
+        background: #ffffff;
+        font-weight: 800;
+      }
+
+      td:last-child, th:last-child { border-right: 0; }
+      tr:last-child td, tr:last-child th { border-bottom: 0; }
+      .not-published { background: var(--gap); font-weight: 700; }
+
+      .sources, .backup, .questions {
+        margin-top: 20px;
+        max-width: 1120px;
+      }
+
+      .sources h2, .backup h2, .questions h2 {
+        font-size: 18px;
+        margin: 0 0 10px;
+      }
+
+      .questions h3 {
+        margin: 16px 0 6px;
+        font-size: 16px;
+      }
+
+      .sources ol {
+        margin: 0;
+        padding-left: 22px;
+        color: var(--muted);
+        line-height: 1.55;
+      }
+
+      .questions p, .backup p {
+        margin: 0 0 10px;
+        color: var(--muted);
+        line-height: 1.55;
+      }
+
+      .sources a { color: var(--accent-dark); }
+      footer {
+        margin-top: 24px;
+        padding-top: 16px;
+        border-top: 1px solid var(--line);
+        color: var(--muted);
+        font-size: 13px;
+      }
+
+      @media (max-width: 720px) {
+        header, main { padding-left: 16px; padding-right: 16px; }
+        .answer { font-size: 25px; }
+        table { min-width: 960px; }
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1 class="answer">OpenAI does not publish one fixed ChatGPT usage limit: it publishes plan, model, workspace, and reset rules, and this page adds the downloadable official-source table the top results do not provide.</h1>
+      <p class="subline">Official wording: “Usage limits depend on your plan, the model” and workspace settings. Free and Go everyday text chats are unlimited, but uploads, images, voice, data analysis, deep research, reasoning, Pro models, Work, and Codex still have separate limits.</p>
+      <div class="bar">
+        <span>Scraped date: 2026-09-16</span>
+        <a class="button" href="./chatgpt-usage-limit.csv" download>Download clean CSV</a>
+        <a class="button secondary" href="./chatgpt-usage-limit-full-citations.csv" download>Download full citations CSV</a>
+      </div>
+      <nav class="related-pages" aria-label="Related limit tables">
+        <a href="../">Claude usage limit</a>
+        <a href="../codex-usage-limit/">Codex usage limit</a>
+        <a href="../claude-code-usage-limit/">Claude Code usage limit</a>
+        <a href="../gemini-usage-limit/">Gemini usage limit</a>
+        <a href="../chatgpt-usage-limit/">ChatGPT usage limit</a>
+      </nav>
+    </header>
+    <main>
+      <div class="table-frame">
+        <table>
+          <caption>ChatGPT Usage Limit Official Table</caption>
+          <thead><tr><th>Category</th><th>Official item</th><th>Published value</th><th>Window or reset</th><th>Source ID</th></tr></thead>
+          <tbody>
+<tr><th>Plan</th><td>Free everyday text chat</td><td>Unlimited text chats with GPT-5.6 Luna</td><td>No fixed reset window published; subject to abuse guardrails</td><td>O1, O6</td></tr>
+<tr><th>Plan</th><td>Go everyday text chat</td><td>Unlimited text chats with GPT-5.6 Luna</td><td>No fixed reset window published; subject to abuse guardrails</td><td>O1, O6</td></tr>
+<tr><th>Plan</th><td>Plus price</td><td>$20/month</td><td>Billed monthly</td><td>O2, O7</td></tr>
+<tr><th>Plan</th><td>Plus message cap</td><td class="not-published">Higher model limits; exact cap not published</td><td>May vary based on system conditions</td><td>O2</td></tr>
+<tr><th>Plan</th><td>Plus GPT-5.6 Sol</td><td>Medium and High included; Extra High and Pro not included</td><td>Thinking limits depend on plan</td><td>O1</td></tr>
+<tr><th>Plan</th><td>Plus GPT-6 Astra</td><td>Included in ChatGPT Work and Codex</td><td>Usage and credit rules are separate from Chat</td><td>O1</td></tr>
+<tr><th>Plan</th><td>Pro price</td><td>From $100/month</td><td>Pro $100 is available; Pro $200 new sign-ups paused as of 2026-09-10</td><td>O3, O7</td></tr>
+<tr><th>Plan</th><td>Pro usage multiplier</td><td>Pro $100 is 5x Plus; Pro $200 is 20x Plus</td><td>Higher usage allowance than Plus</td><td>O3</td></tr>
+<tr><th>Model allowance</th><td>Pro $100 GPT-6 Pro and GPT-5.6 Sol Pro</td><td>50 messages/week shared across GPT-6 Pro and GPT-5.6 Sol Pro</td><td>Weekly allowance</td><td>O1</td></tr>
+<tr><th>Model allowance</th><td>Pro $200 GPT-6 Pro</td><td>200 messages/week</td><td>Weekly allowance; new sign-ups paused</td><td>O1, O3</td></tr>
+<tr><th>Model allowance</th><td>Pro $200 GPT-5.6 Sol Pro</td><td>170 messages/day</td><td>Both GPT-6 Pro and GPT-5.6 Sol Pro together are also limited to 200 messages/day</td><td>O1</td></tr>
+<tr><th>Business</th><td>Business Standard GPT-6 Pro and GPT-5.6 Sol Pro</td><td>15 Pro messages/month shared</td><td>Monthly allowance</td><td>O1, O4</td></tr>
+<tr><th>Business</th><td>Business Premium GPT-6 Pro and GPT-5.6 Sol Pro</td><td>50 Pro messages/week shared</td><td>Weekly allowance</td><td>O1, O4</td></tr>
+<tr><th>Business local estimate</th><td>GPT-6 Astra on Standard Business</td><td>5-45 local messages</td><td>Per 5-hour window; actual usage varies</td><td>O4, O7</td></tr>
+<tr><th>Business local estimate</th><td>GPT-5.6 Sol on Standard Business</td><td>10-100 local messages</td><td>Per 5-hour window; actual usage varies</td><td>O4, O7</td></tr>
+<tr><th>Business local estimate</th><td>GPT-5.6 Terra on Standard Business</td><td>25-200 local messages</td><td>Per 5-hour window; actual usage varies</td><td>O4, O7</td></tr>
+<tr><th>Business local estimate</th><td>GPT-5.6 Luna on Standard Business</td><td>250-2,000 local messages</td><td>Per 5-hour window; actual usage varies</td><td>O4, O7</td></tr>
+<tr><th>Business local estimate</th><td>Business Premium local usage</td><td>5x Standard seats</td><td>No 5-hour limit; users can maximize uninterrupted session time</td><td>O4</td></tr>
+<tr><th>Enterprise and Edu</th><td>Eligible base models</td><td>Virtually unlimited messages</td><td>Subject to safeguards; usage may still be billable under the agreement</td><td>O5</td></tr>
+<tr><th>Enterprise and Edu</th><td>GPT-6 Astra</td><td>Off by default at launch in eligible workspaces</td><td>Workspace owners enable it through model access controls</td><td>O5</td></tr>
+<tr><th>Current account</th><td>Current limits and reset times</td><td class="not-published">Not published by OpenAI</td><td>Check the in-account usage dashboard; reset time displays when available</td><td>O1, O7</td></tr>
+<tr><th>Current account</th><td>Support reset of usage limits</td><td>No</td><td>Wait for reset or use another available option</td><td>O1</td></tr>
+<tr><th>Context</th><td>GPT Instant total context window on Free</td><td>27K</td><td>Shared context window</td><td>O6</td></tr>
+<tr><th>Context</th><td>GPT Instant total context window on Go</td><td>54K</td><td>Shared context window</td><td>O6</td></tr>
+<tr><th>Context</th><td>GPT Instant total context window on Plus</td><td>54K</td><td>Shared context window</td><td>O6</td></tr>
+<tr><th>Context</th><td>GPT Instant total context window on Pro</td><td>128K</td><td>Shared context window</td><td>O6</td></tr>
+<tr><th>Context</th><td>GPT Reasoning total context window on Free</td><td>Varies</td><td>Not a fixed published number</td><td>O6</td></tr>
+<tr><th>Context</th><td>GPT Reasoning total context window on Go</td><td>256K</td><td>Shared context window</td><td>O6</td></tr>
+<tr><th>Context</th><td>GPT Reasoning total context window on Plus</td><td>256K</td><td>Shared context window</td><td>O6</td></tr>
+<tr><th>Context</th><td>GPT Reasoning total context window on Pro</td><td>400K</td><td>Shared context window</td><td>O6</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <section class="sources">
+        <h2>Source Map</h2>
+        <ol>
+<li><strong>O1.</strong> <a href="https://help.openai.com/en/articles/20001354-gpt-56-and-gpt-6-pro-in-chatgpt">GPT-5.6 and GPT-6 Pro in ChatGPT</a>: Usage limits; GPT-6 Pro and GPT-5.6 Sol Pro limits.</li>
+<li><strong>O2.</strong> <a href="https://help.openai.com/en/articles/6950777-what-is-chatgpt-plus">What is ChatGPT Plus?</a>: Subscription Details; Usage Limits.</li>
+<li><strong>O3.</strong> <a href="https://help.openai.com/en/articles/9793128-about-chatgpt-pro-tiers">About ChatGPT Pro tiers</a>: Overview; Access and usage allowances; General FAQ.</li>
+<li><strong>O4.</strong> <a href="https://help.openai.com/en/articles/12003714-chatgpt-business-models-and-limits">ChatGPT Business models and limits</a>: GPT-6 Pro in Chat; Local-message estimates by seat type.</li>
+<li><strong>O5.</strong> <a href="https://help.openai.com/en/articles/11165333-chatgpt-enterprise-and-edu-models-and-limits">ChatGPT Enterprise and Edu - Models &amp; Limits</a>: Note on Unlimited Access; New model access controls.</li>
+<li><strong>O6.</strong> <a href="https://chatgpt.com/pricing/">Pricing</a>: Plan cards; Compare features across plans.</li>
+<li><strong>O7.</strong> <a href="https://learn.chatgpt.com/docs/pricing">Pricing | ChatGPT Learn</a>: Pricing options; What are the usage limits for my plan?.</li>
+        </ol>
+      </section>
+      <section class="questions">
+        <h2>Related questions</h2>
+        <h3>ChatGPT limits</h3>
+        <p>For broad ChatGPT limits, use the table above as the official baseline: normal text, reasoning, Pro models, tools, Work, Codex, and workspace controls are counted differently.</p>
+        <h3>ChatGPT Plus limits</h3>
+        <p>Plus has higher model limits than Free and costs $20/month, but OpenAI says Plus message caps may vary based on system conditions.</p>
+        <h3>ChatGPT message limit</h3>
+        <p>OpenAI does not publish one universal message limit for every account. When a reset is available, ChatGPT shows it in the product.</p>
+      </section>
+      <section class="questions">
+        <h2>ChatGPT free limit</h2>
+        <p>Free text chat is unlimited with GPT-5.6 Luna, while uploads, image generation, voice, deep research, memory and context, Codex, and ChatGPT Work are limited with no fixed public counts from OpenAI. OpenAI’s own pricing page says unlimited text chats are subject to abuse guardrails. So ChatGPT without limits only applies to everyday text chat, not every model or tool on the Free plan. For anything outside normal text chat, the official number is Not published.</p>
+      </section>
+      <section class="backup">
+        <h2>Full-Citation Backup</h2>
+        <p>The full-citation CSV keeps the same rows with page title, URL, section, and evidence note for checking or rebuilding the table.</p>
+      </section>
+      <footer>Data comes from official OpenAI and ChatGPT pages only. Cells marked as not published are intentionally left unfilled rather than copied from third-party blogs, forums, or estimates.</footer>
+    </main>
+  </body>
+</html>

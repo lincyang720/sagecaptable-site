@@ -1,0 +1,31 @@
+{
+  "specVersion": "1.0",
+  "host": {
+    "displayName": "Claude Usage Limit Official Table",
+    "identifier": "did:web:usagecaptable.com"
+  },
+  "entries": [
+    {
+      "identifier": "urn:air:usagecaptable.com:server:usagecaptable",
+      "displayName": "Claude Usage Limit Lookup",
+      "type": "application/mcp-server-card+json",
+      "url": "https://usagecaptable.com/.well-known/mcp/server-card.json",
+      "representativeQueries": [
+        "what are the Claude Pro plan usage limits",
+        "Claude Max 20x price and reset window",
+        "Claude Team Standard context window",
+        "official Claude usage limits by plan"
+      ]
+    },
+    {
+      "identifier": "urn:air:usagecaptable.com:skill:usagecaptable-lookup",
+      "displayName": "Usage Limit Lookup Skill",
+      "type": "application/skill+markdown",
+      "url": "https://usagecaptable.com/.well-known/agent-skills/usagecaptable-lookup/SKILL.md",
+      "representativeQueries": [
+        "look up Claude plan usage limit",
+        "official Anthropic Claude limits skill"
+      ]
+    }
+  ]
+}

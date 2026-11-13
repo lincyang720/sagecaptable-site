@@ -1,0 +1,53 @@
+{
+  "issuer": "https://usagecaptable.com",
+  "authorization_endpoint": "https://usagecaptable.com/oauth/authorize",
+  "token_endpoint": "https://usagecaptable.com/oauth/token",
+  "jwks_uri": "https://usagecaptable.com/.well-known/jwks.json",
+  "grant_types_supported": [
+    "authorization_code",
+    "client_credentials"
+  ],
+  "response_types_supported": [
+    "code"
+  ],
+  "scopes_supported": [
+    "read"
+  ],
+  "agent_auth": {
+    "skill": "https://usagecaptable.com/auth.md",
+    "register_uri": "https://usagecaptable.com/oauth/register",
+    "identity_endpoint": "https://usagecaptable.com/oauth/identity",
+    "claim_endpoint": "https://usagecaptable.com/oauth/claim",
+    "events_endpoint": "https://usagecaptable.com/oauth/events",
+    "identity_types_supported": [
+      "anonymous",
+      "service_auth",
+      "identity_assertion"
+    ],
+    "claim_uri": "https://usagecaptable.com/oauth/claim",
+    "anonymous": {
+      "credential_types_supported": [
+        "none"
+      ],
+      "claim_uri": "https://usagecaptable.com/oauth/claim"
+    },
+    "service_auth": {
+      "client_registration_types_supported": [
+        "oauth2"
+      ],
+      "authorization_endpoint": "https://usagecaptable.com/oauth/authorize",
+      "token_endpoint": "https://usagecaptable.com/oauth/token"
+    },
+    "identity_assertion": {
+      "assertion_types_supported": [
+        "urn:ietf:params:oauth:token-type:id-jag"
+      ],
+      "credential_types_supported": [
+        "id-jag"
+      ]
+    },
+    "events_supported": [
+      "https://schemas.workos.com/events/agent/auth/identity/assertion/revoked"
+    ]
+  }
+}

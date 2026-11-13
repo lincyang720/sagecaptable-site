@@ -1,0 +1,31 @@
+# Claude Usage Limit Official Table
+
+A clean, citable dataset of official Anthropic Claude plan usage limits with per-cell official-source citations. No fixed message counts are invented; "Not published" is preserved verbatim.
+
+## Plans
+- Free - USD 0
+- Pro - USD 20/month (USD 17/mo annual effective)
+- Max 5x - USD 100/month
+- Max 20x - USD 200/month
+- Team Standard - USD 25/seat/month (USD 20 annual)
+- Team Premium - USD 125/seat/month (USD 100 annual)
+- Enterprise self-serve - USD 20/seat/month annual + API usage
+- Enterprise sales-assisted - USD 20/seat/month annual + API usage
+
+## Key facts
+- Anthropic publishes relative per-session usage multipliers and rolling 5-hour reset windows; it does NOT publish fixed message counts.
+- Context windows: 1M / 500K / 200K tokens depending on model and surface.
+- All figures sourced from official Anthropic pricing and Claude help pages.
+
+## Sources
+- S1 Claude pricing: https://claude.com/pricing
+- S2 Context window sizes: https://support.claude.com/en/articles/8606394-how-large-is-the-context-window-on-paid-claude-plans
+- S3 Pro plan: https://support.claude.com/en/articles/8325606-what-is-the-pro-plan
+- S4 Max plan: https://support.claude.com/en/articles/11049741-what-is-the-max-plan
+- S5 Team plan: https://support.claude.com/en/articles/9266767-what-is-the-team-plan
+- S6 Enterprise plan: https://support.claude.com/en/articles/9797531-what-is-the-enterprise-plan
+- S7 Enterprise billing: https://support.claude.com/en/articles/11526368-how-am-i-billed-for-my-enterprise-plan
+- S8 Claude Fable models: https://support.claude.com/en/articles/15424964-claude-fable-models-on-your-plan
+- S9 Usage and length limits: https://support.claude.com/en/articles/11647753-how-do-usage-and-length-limits-work
+
+Full machine-readable data: https://usagecaptable.com/claude-usage-limit-official-table.csv

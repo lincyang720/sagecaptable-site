@@ -1,0 +1,20 @@
+{
+  "schemaVersion": "1.0",
+  "serverInfo": {
+    "name": "usagecaptable",
+    "version": "1.0.0"
+  },
+  "endpoint": "https://usagecaptable.com/mcp",
+  "transport": "streamable-http",
+  "capabilities": {
+    "tools": true,
+    "resources": false,
+    "prompts": false
+  },
+  "tools": [
+    {
+      "name": "usagecaptable_lookup",
+      "description": "Look up official Anthropic Claude plan usage limits by plan name."
+    }
+  ]
+}

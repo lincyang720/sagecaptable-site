@@ -1,0 +1,391 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Claude Usage Limit Official Table</title>
+    <link rel="ai-catalog" href="/.well-known/ai-catalog.json" />
+    <link rel="canonical" href="https://usagecaptable.com/" />
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='12' fill='%230f766e'/%3E%3Cpath d='M15 18h34v8H15zm0 14h34v8H15zm0 14h22v8H15z' fill='white'/%3E%3C/svg%3E" />
+    <style>
+      :root {
+        color-scheme: light;
+        --ink: #17191f;
+        --muted: #5b6472;
+        --line: #d9dde5;
+        --soft: #f5f7fa;
+        --soft-2: #eef7f4;
+        --accent: #0f766e;
+        --accent-dark: #115e59;
+        --gap: #fff5cc;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+        color: var(--ink);
+        background: #ffffff;
+        font-family: Arial, Helvetica, sans-serif;
+      }
+
+      header {
+        padding: 22px 28px 16px;
+        border-bottom: 1px solid var(--line);
+      }
+
+      .answer {
+        max-width: 1120px;
+        margin: 0 0 12px;
+        font-size: clamp(23px, 3vw, 36px);
+        line-height: 1.18;
+        font-weight: 800;
+        letter-spacing: 0;
+      }
+
+      .subline {
+        max-width: 960px;
+        margin: 0;
+        color: var(--muted);
+        font-size: 16px;
+        line-height: 1.5;
+      }
+
+      .bar,
+      .related-pages {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        gap: 10px 14px;
+        margin-top: 16px;
+        font-size: 14px;
+        color: var(--muted);
+      }
+
+      .button,
+      .related-pages a {
+        display: inline-flex;
+        min-height: 40px;
+        align-items: center;
+        justify-content: center;
+        padding: 0 14px;
+        border: 1px solid var(--accent-dark);
+        border-radius: 6px;
+        background: var(--accent);
+        color: #ffffff;
+        font-weight: 700;
+        text-decoration: none;
+      }
+
+      .secondary,
+      .related-pages a {
+        border-color: var(--line);
+        background: #ffffff;
+        color: var(--accent-dark);
+      }
+
+      main {
+        padding: 18px 28px 30px;
+      }
+
+      .table-frame {
+        border: 1px solid var(--line);
+        border-radius: 6px;
+        overflow: auto;
+        background: #ffffff;
+      }
+
+      table {
+        width: 100%;
+        min-width: 1760px;
+        border-collapse: collapse;
+        font-size: 14px;
+        line-height: 1.35;
+      }
+
+      caption {
+        padding: 12px 14px;
+        text-align: left;
+        background: var(--soft-2);
+        border-bottom: 1px solid var(--line);
+        font-weight: 800;
+      }
+
+      th,
+      td {
+        padding: 10px 12px;
+        border-right: 1px solid var(--line);
+        border-bottom: 1px solid var(--line);
+        vertical-align: top;
+        text-align: left;
+      }
+
+      th {
+        position: sticky;
+        top: 0;
+        z-index: 1;
+        background: #edf2f5;
+        white-space: nowrap;
+      }
+
+      tbody th {
+        position: static;
+        background: #ffffff;
+        font-weight: 800;
+      }
+
+      td:last-child,
+      th:last-child {
+        border-right: 0;
+      }
+
+      tr:last-child td,
+      tr:last-child th {
+        border-bottom: 0;
+      }
+
+      .not-published {
+        background: var(--gap);
+        font-weight: 700;
+      }
+
+      .sources {
+        max-width: 1160px;
+        margin-top: 24px;
+      }
+
+      .table-note {
+        margin: 8px 0 0;
+        color: var(--muted);
+        font-size: 13px;
+        line-height: 1.45;
+      }
+
+      h2 {
+        margin: 0 0 10px;
+        font-size: 20px;
+        letter-spacing: 0;
+      }
+
+      ol {
+        margin: 0;
+        padding-left: 22px;
+      }
+
+      li {
+        margin: 8px 0;
+        line-height: 1.45;
+      }
+
+      a {
+        color: var(--accent-dark);
+      }
+
+      footer {
+        margin-top: 26px;
+        padding-top: 16px;
+        border-top: 1px solid var(--line);
+        color: var(--muted);
+        font-size: 13px;
+        line-height: 1.45;
+      }
+
+      @media (max-width: 720px) {
+        header,
+        main {
+          padding-left: 16px;
+          padding-right: 16px;
+        }
+
+        .button {
+          width: 100%;
+        }
+      }
+    
+      main > section { margin-top: 28px; }
+      .takeaways {
+        border: 1px solid var(--line);
+        border-radius: 6px;
+        background: var(--soft);
+        padding: 14px 16px;
+        max-width: 1160px;
+      }
+      .takeaways h2, .faq h2, .who h2, .notpub h2 { margin: 0 0 8px; }
+      .takeaways ul, .who ul { margin: 6px 0 0; padding-left: 22px; }
+      .takeaways li, .who li { margin: 6px 0; line-height: 1.5; }
+      .faq dl { margin: 6px 0 0; }
+      .faq dt { font-weight: 800; margin-top: 14px; }
+      .faq dd { margin: 4px 0 0; line-height: 1.5; }
+      .newblock { max-width: 1160px; }
+    </style>
+
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"FAQPage","mainEntity":[
+    {"@type":"Question","name":"Does Claude publish a fixed message limit?","acceptedAnswer":{"@type":"Answer","text":"No. The fixed message count is not published for any plan; limits are relative multipliers plus time windows."}},
+    {"@type":"Question","name":"How long is the usage reset window?","acceptedAnswer":{"@type":"Answer","text":"Paid plans use a rolling 5-hour session window, plus a weekly cap that resets on a fixed time assigned to the account."}},
+    {"@type":"Question","name":"What are the current Claude plan prices?","acceptedAnswer":{"@type":"Answer","text":"Free USD 0, Pro USD 20/month, Max 5x USD 100/month, Max 20x USD 200/month, Team Standard USD 25/seat/month, Team Premium USD 125/seat/month, Enterprise self-serve and sales-assisted USD 20/seat/month plus usage."}},
+    {"@type":"Question","name":"What context window do paid Claude plans have?","acceptedAnswer":{"@type":"Answer","text":"1M / 500K / 200K tokens depending on model and surface."}},
+    {"@type":"Question","name":"Which plans include Claude Code?","acceptedAnswer":{"@type":"Answer","text":"Every plan listed in the table records Claude Code access as Yes."}},
+    {"@type":"Question","name":"Why are some cells marked Not published?","acceptedAnswer":{"@type":"Answer","text":"Because no official Anthropic or Claude page states that figure; the table preserves the gap instead of substituting a number from a non-official source."}}
+  ]}
+  </script>
+  </head>
+  <body>
+    <header>
+      <h1 class="answer">Anthropic does not publish fixed Claude message counts; it publishes relative usage multipliers and reset windows, so fixed-count claims outside official pages are unsupported.</h1>
+      <p class="subline">Clean table for Claude usage limits. Numbers stay in the data cells; source references are separated into the source column and mapped below.</p>
+      <div class="bar">
+        <strong>Scrape date: 2026-09-14</strong>
+        <a class="button" href="./claude-usage-limit-official-table.csv" download>Download clean CSV</a>
+        <a class="button secondary" href="./claude-usage-limit-official-table-full-citations.csv" download>Full citation CSV</a>
+      </div>
+      <nav class="related-pages" aria-label="Related limit tables">
+        <a href="./codex-usage-limit/">Codex usage limit</a>
+        <a href="./claude-code-usage-limit/">Claude Code usage limit</a>
+        <a href="./gemini-usage-limit/">Gemini usage limit</a>
+        <a href="./chatgpt-usage-limit/">ChatGPT usage limit</a>
+      </nav>
+    </header>
+
+    <main>
+
+      <section class="takeaways" aria-label="Key takeaways">
+        <h2>Key takeaways</h2>
+        <ul>
+          <li>Anthropic does <strong>not</strong> publish a fixed message count for any plan. Limits are expressed as <strong>relative per-session multipliers</strong> (for example Pro = at least 5x Free) plus a <strong>rolling session window</strong> and a <strong>weekly cap</strong>. Every "N messages per day" figure you see elsewhere is unsourced.</li>
+          <li>The exact weekly quantity is confirmed to exist but is <strong>not published</strong>; the same is true for the exact per-session amount and any fixed Fable quota. Those cells stay marked "Not published" in the table below.</li>
+          <li>Plan prices as published: Free USD 0, Pro USD 20/month, Max 5x USD 100/month, Max 20x USD 200/month, Team Standard USD 25/seat/month, Team Premium USD 125/seat/month, Enterprise self-serve and sales-assisted USD 20/seat/month plus usage.</li>
+          <li>Context window (1M / 500K / 200K tokens) is a <strong>separate axis</strong> from the usage allowance, and is model- and surface-dependent.</li>
+          <li>Usage-based Enterprise plans carry <strong>no plan-level or seat-level usage limit</strong>; consumption is billed at API rates instead.</li>
+        </ul>
+      </section>
+      <div class="table-frame">
+        <table id="limits-table">
+          <caption>Claude usage limit table from official Anthropic and Claude pages</caption>
+          <thead><tr><th>Plan</th><th>Buyer type</th><th>Price</th><th>Seat range</th><th>Billing terms</th><th>Included usage allowance</th><th>Per-session relative usage</th><th>Session reset window</th><th>Weekly limit quantity</th><th>Weekly reset rule</th><th>Fixed message count</th><th>Fable quota or billing</th><th>Other model quota published</th><th>Context window published</th><th>Claude Code access</th><th>Sources</th></tr></thead>
+          <tbody>
+            <tr><th>Free</th><td>Individual</td><td>USD 0</td><td>n/a</td><td>Free plan</td><td class="not-published">Not published</td><td class="not-published">Not published</td><td class="not-published">Not published</td><td class="not-published">Not published</td><td class="not-published">Not published</td><td class="not-published">Not published</td><td class="not-published">Not published</td><td class="not-published">Not published</td><td class="not-published">Not published</td><td class="not-published">Not published</td><td>S1, S2, S3, S8, S9</td></tr>
+            <tr><th>Pro</th><td>Individual</td><td>USD 20/month; USD 17/month annual effective; USD 200 upfront</td><td>n/a</td><td>Monthly or annual</td><td class="not-published">At least 5x Free per session; exact numeric amount not published</td><td>At least 5x Free per session</td><td>Rolling 5-hour session window</td><td class="not-published">Yes; exact weekly quantity not published</td><td>Fixed time assigned to the account</td><td class="not-published">Not published</td><td class="not-published">Pay-as-you-go usage credits; exact quota not published</td><td class="not-published">Not published</td><td>1M / 500K / 200K tokens, model and surface dependent</td><td>Yes</td><td>S1, S2, S3, S8, S9</td></tr>
+            <tr><th>Max 5x</th><td>Individual</td><td>USD 100/month</td><td>n/a</td><td>Monthly subscription only</td><td class="not-published">5x Pro; exact numeric amount not published</td><td>5x Pro per session</td><td>Rolling 5-hour session window</td><td class="not-published">Yes; exact weekly quantity not published</td><td>Fixed time assigned to the account</td><td class="not-published">Not published</td><td class="not-published">Up to 50% of weekly usage limits at no extra cost; exact weekly amount not published</td><td class="not-published">Not published</td><td>1M / 500K / 200K tokens, model and surface dependent</td><td>Yes</td><td>S1, S2, S4, S8, S9</td></tr>
+            <tr><th>Max 20x</th><td>Individual</td><td>USD 200/month</td><td>n/a</td><td>Monthly subscription only</td><td class="not-published">20x Pro; exact numeric amount not published</td><td>20x Pro per session</td><td>Rolling 5-hour session window</td><td class="not-published">Yes; exact weekly quantity not published</td><td>Fixed time assigned to the account</td><td class="not-published">Not published</td><td class="not-published">Up to 50% of weekly usage limits at no extra cost; exact weekly amount not published</td><td class="not-published">Not published</td><td>1M / 500K / 200K tokens, model and surface dependent</td><td>Yes</td><td>S1, S2, S4, S8, S9</td></tr>
+            <tr><th>Team Standard</th><td>Team</td><td>USD 25/member/month monthly; USD 20/member/month annual</td><td>2 to 150 members</td><td>Monthly or annual</td><td class="not-published">1.25x Pro per session; exact numeric amount not published</td><td>1.25x Pro per 5-hour session</td><td>5-hour session</td><td class="not-published">Yes; exact weekly quantity not published</td><td>Fixed time assigned to the account</td><td class="not-published">Not published</td><td class="not-published">Pay-as-you-go usage credits; exact quota not published</td><td class="not-published">Not published</td><td>200K tokens in Team overview; 1M / 500K / 200K tokens by model and surface on paid-plan context page</td><td>Yes</td><td>S1, S2, S5, S8, S9</td></tr>
+            <tr><th>Team Premium</th><td>Team</td><td>USD 125/member/month monthly; USD 100/member/month annual</td><td>2 to 150 members</td><td>Monthly or annual</td><td class="not-published">6.25x Pro per session; 5x Standard; exact numeric amount not published</td><td>6.25x Pro per 5-hour session</td><td>5-hour session</td><td class="not-published">Yes; exact weekly quantity not published</td><td>Fixed time assigned to the account</td><td class="not-published">Not published</td><td class="not-published">Up to 50% of weekly usage limits at no extra cost; exact weekly amount not published</td><td class="not-published">Not published</td><td>200K tokens in Team overview; 1M / 500K / 200K tokens by model and surface on paid-plan context page</td><td>Yes</td><td>S1, S2, S5, S8, S9</td></tr>
+            <tr><th>Enterprise self-serve</th><td>Enterprise</td><td>USD 20/seat/month annually; usage at API rates</td><td>Minimum 20 seats</td><td>Annual seat fee; usage credits purchased upfront</td><td>No included token allowance</td><td>No plan-level or seat-level usage limit</td><td>Not applicable for usage-based Enterprise</td><td>No plan-level or seat-level weekly usage limit</td><td>n/a</td><td>No included fixed token allowance</td><td>Fable billed at standard API rates</td><td>No plan-level quota; usage billed by token consumption at API rates</td><td>1M / 500K / 200K tokens, model and surface dependent</td><td>Yes</td><td>S1, S2, S6, S7, S8</td></tr>
+            <tr><th>Enterprise sales-assisted</th><td>Enterprise</td><td>USD 20/seat/month annually; usage at API rates</td><td>Minimum 50 seats</td><td>Annual seat fee; usage billed monthly in arrears</td><td>No included token allowance</td><td>No plan-level or seat-level usage limit</td><td>Not applicable for usage-based Enterprise</td><td>No plan-level or seat-level weekly usage limit</td><td>n/a</td><td>No included fixed token allowance</td><td>Fable billed at standard API rates</td><td>No plan-level quota; usage billed by token consumption at API rates</td><td>1M / 500K / 200K tokens, model and surface dependent</td><td>Yes</td><td>S1, S2, S6, S7, S8</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="table-note">Not published = Not published by Anthropic.</p>
+
+      <section class="newblock" aria-label="Usage limits versus length limits">
+        <h2>Usage limits vs length limits</h2>
+        <p>Two different limits are easy to conflate when searching for "claude usage limits":</p>
+        <ul>
+          <li><strong>Usage limits</strong> cap how much you can use Claude over a period. Anthropic states them as relative multipliers (Pro = at least 5x Free per session; Max 5x = 5x Pro; Team Premium = 6.25x Pro) together with a rolling session window and a weekly cap. No plan has a published fixed message count. See the "Per-session relative usage", "Session reset window" and "Weekly limit quantity" columns above.</li>
+          <li><strong>Length limits</strong> are about how much text fits in a single conversation: the context window. On paid plans this is model- and surface-dependent (1M / 500K / 200K tokens), which is a different axis from the usage allowance.</li>
+        </ul>
+        <p class="table-note">Both statements are limited to what Anthropic has published. Every unpublished cell in the table above is left as "Not published" and each published figure maps to S1–S9.</p>
+      </section>
+
+      <section class="newblock" aria-label="How the limits are structured">
+        <h2>How Claude's limits are structured</h2>
+        <ul>
+          <li><strong>Rolling session window.</strong> Paid plans reset usage on a rolling 5-hour session window rather than at a fixed clock time (see "Session reset window").</li>
+          <li><strong>Weekly cap.</strong> A second limit applies per week and resets on a fixed time assigned to the account; Anthropic confirms the cap exists but does not publish its exact quantity.</li>
+          <li><strong>Relative multipliers, not counts.</strong> Each tier is described relative to another tier, not in absolute messages (Pro = at least 5x Free; Max 5x = 5x Pro; Team Premium = 6.25x Pro).</li>
+          <li><strong>Usage-based Enterprise.</strong> Enterprise self-serve and sales-assisted plans have no plan-level or seat-level usage limit; usage is billed by token consumption at API rates.</li>
+        </ul>
+      </section>
+
+      <section class="newblock notpub" aria-label="What Anthropic has not published">
+        <h2>What Anthropic has not published</h2>
+        <p>Across all eight plans the same fields are left unpublished, and the table keeps them that way rather than filling them with numbers taken from other sites:</p>
+        <ul>
+          <li><strong>Fixed message count</strong> — not published for any plan.</li>
+          <li><strong>Exact weekly quantity</strong> — a weekly limit is confirmed, but its number is not given.</li>
+          <li><strong>Exact per-session amount</strong> — expressed only as a multiplier relative to another tier.</li>
+          <li><strong>Fable quota</strong> — billed through usage credits or API rates; no fixed quota is published.</li>
+        </ul>
+        <p class="table-note">This is why the page shows "Not published" instead of an estimate: a figure that no official page states cannot be traced to a source.</p>
+      </section>
+
+      <section class="newblock faq" aria-label="Frequently asked questions">
+        <h2>Frequently asked questions</h2>
+        <dl>
+          <dt>Does Claude publish a fixed message limit?</dt>
+          <dd>No. The "Fixed message count" column is "Not published" for every plan in the table above; limits are relative multipliers plus time windows.</dd>
+          <dt>How long is the usage reset window?</dt>
+          <dd>Paid plans use a rolling 5-hour session window, and a weekly cap that resets on a fixed time assigned to the account (see the "Session reset window" and "Weekly reset rule" columns).</dd>
+          <dt>What are the current Claude plan prices?</dt>
+          <dd>As published: Free USD 0, Pro USD 20/month, Max 5x USD 100/month, Max 20x USD 200/month, Team Standard USD 25/seat/month, Team Premium USD 125/seat/month, Enterprise self-serve and sales-assisted USD 20/seat/month plus usage.</dd>
+          <dt>What context window do paid Claude plans have?</dt>
+          <dd>1M / 500K / 200K tokens depending on model and surface, per the "Context window published" column.</dd>
+          <dt>Which plans include Claude Code?</dt>
+          <dd>Every plan listed in the table records Claude Code access as "Yes" (see the "Claude Code access" column).</dd>
+          <dt>Why are some cells marked "Not published"?</dt>
+          <dd>Because no official Anthropic or Claude page states that figure. The table preserves the gap instead of substituting a number from a non-official source.</dd>
+        </dl>
+      </section>
+
+      <section class="newblock who" aria-label="Who made this table, how, and why">
+        <h2>Who made this table, how, and why</h2>
+        <ul>
+          <li><strong>Who:</strong> This reference table is published and maintained by usagecaptable.com as a public dataset of Claude plan usage limits.</li>
+          <li><strong>How:</strong> Figures are transcribed only from official Anthropic and Claude pages (S1–S9). The page does not use its own testing, estimates, community posts or third-party blogs, and preserves every unpublished field as "Not published".</li>
+          <li><strong>Why:</strong> So that people and automated agents have one citable place for these limits, with each figure mapped to an official source instead of repeated second-hand numbers.</li>
+          <li><strong>Last updated:</strong> 2026-09-21 (sections added); underlying data captured 2026-09-14.</li>
+        </ul>
+      </section>
+
+
+      <section class="sources">
+        <h2>Source map</h2>
+        <ol>
+          <li><strong>S1.</strong> <a href="https://claude.com/pricing">Claude pricing</a>: Free, Pro, Max, Team, Enterprise, billing and payments, Claude Code FAQ.</li>
+          <li><strong>S2.</strong> <a href="https://support.claude.com/en/articles/8606394-how-large-is-the-context-window-on-paid-claude-plans">How large is the context window on paid Claude plans?</a>: Current context window sizes.</li>
+          <li><strong>S3.</strong> <a href="https://support.claude.com/en/articles/8325606-what-is-the-pro-plan">What is the Pro plan?</a>: Key benefits, cost, usage limits.</li>
+          <li><strong>S4.</strong> <a href="https://support.claude.com/en/articles/11049741-what-is-the-max-plan">What is the Max plan?</a>: Key benefits, cost, billing, usage limits.</li>
+          <li><strong>S5.</strong> <a href="https://support.claude.com/en/articles/9266767-what-is-the-team-plan">What is the Team plan?</a>: Included features, cost, usage limits.</li>
+          <li><strong>S6.</strong> <a href="https://support.claude.com/en/articles/9797531-what-is-the-enterprise-plan">What is the Enterprise plan?</a>: Pricing, usage limits, self-serve vs. sales-assisted Enterprise.</li>
+          <li><strong>S7.</strong> <a href="https://support.claude.com/en/articles/11526368-how-am-i-billed-for-my-enterprise-plan">How am I billed for my Enterprise plan?</a>: Seat fees, usage billing, team usage behavior.</li>
+          <li><strong>S8.</strong> <a href="https://support.claude.com/en/articles/15424964-claude-fable-models-on-your-plan">Claude Fable models on your plan</a>: Fable model billing and quota behavior by plan.</li>
+          <li><strong>S9.</strong> <a href="https://support.claude.com/en/articles/11647753-how-do-usage-and-length-limits-work">How do usage and length limits work?</a>: Usage factors and context-window explanation.</li>
+        </ol>
+      </section>
+
+      <footer>Data comes from official Anthropic and Claude help/pricing pages. It is not based on our own testing, estimates, community posts, or third-party blogs.</footer>
+    </main>
+
+  
+  <script>
+  (function () {
+    if (!("modelContext" in navigator) || !navigator.modelContext) return;
+    try {
+      navigator.modelContext.registerTool({
+        name: "usagecaptable_lookup",
+        description: "Look up official Anthropic Claude plan usage limits (prices, per-session multipliers, reset windows, context windows) from the Claude Usage Limit Official Table. Returns a concise, source-cited summary.",
+        inputSchema: {
+          type: "object",
+          properties: {
+            plan: {
+              type: "string",
+              description: "Optional plan name: Free, Pro, Max 5x, Max 20x, Team Standard, Team Premium, Enterprise self-serve, or Enterprise sales-assisted."
+            }
+          }
+        },
+        execute: async function (input, signal) {
+          var summary = "Claude Usage Limit Official Table (https://usagecaptable.com) — official Anthropic Claude plan limits. " +
+            "Plans: Free (USD 0), Pro (USD 20/mo), Max 5x (USD 100/mo), Max 20x (USD 200/mo), Team Standard (USD 25/seat/mo), " +
+            "Team Premium (USD 125/seat/mo), Enterprise self-serve (USD 20/seat/mo + API usage), Enterprise sales-assisted (USD 20/seat/mo + API usage). " +
+            "Anthropic publishes relative per-session multipliers and rolling 5-hour reset windows; it does not publish fixed message counts. " +
+            "Context windows: 1M / 500K / 200K tokens depending on model and surface. All figures are sourced from official Anthropic pricing and Claude help pages.";
+          return { content: [{ type: "text", text: summary }] };
+        }
+      });
+    } catch (e) { /* modelContext not supported in this browser */ }
+  })();
+  </script>
+</body>
+</html>

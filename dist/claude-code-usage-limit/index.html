@@ -1,0 +1,230 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Claude Code Usage Limit Official Table</title>
+    <link rel="canonical" href="https://usagecaptable.com/claude-code-usage-limit/" />
+    <style>
+      :root {
+        color-scheme: light;
+        --ink: #17191f;
+        --muted: #5b6472;
+        --line: #d9dde5;
+        --soft: #f5f7fa;
+        --soft-2: #eef7f4;
+        --accent: #0f766e;
+        --accent-dark: #115e59;
+        --gap: #fff5cc;
+      }
+
+      * { box-sizing: border-box; }
+
+      body {
+        margin: 0;
+        color: var(--ink);
+        background: #ffffff;
+        font-family: Arial, Helvetica, sans-serif;
+      }
+
+      header {
+        padding: 22px 28px 16px;
+        border-bottom: 1px solid var(--line);
+      }
+
+      .answer {
+        max-width: 1120px;
+        margin: 0 0 12px;
+        font-size: clamp(23px, 3vw, 36px);
+        line-height: 1.18;
+        font-weight: 800;
+        letter-spacing: 0;
+      }
+
+      .subline {
+        max-width: 980px;
+        margin: 0;
+        color: var(--muted);
+        font-size: 16px;
+        line-height: 1.5;
+      }
+
+      .bar, .related-pages {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        gap: 10px 14px;
+        margin-top: 16px;
+        font-size: 14px;
+        color: var(--muted);
+      }
+
+      .button, .related-pages a {
+        display: inline-flex;
+        min-height: 40px;
+        align-items: center;
+        justify-content: center;
+        padding: 0 14px;
+        border: 1px solid var(--accent-dark);
+        border-radius: 6px;
+        background: var(--accent);
+        color: #ffffff;
+        font-weight: 700;
+        text-decoration: none;
+      }
+
+      .secondary, .related-pages a {
+        border-color: var(--line);
+        background: #ffffff;
+        color: var(--accent-dark);
+      }
+
+      main { padding: 18px 28px 30px; }
+
+      .table-frame {
+        border: 1px solid var(--line);
+        border-radius: 6px;
+        overflow: auto;
+        background: #ffffff;
+      }
+
+      table {
+        width: 100%;
+        min-width: 1120px;
+        border-collapse: collapse;
+        font-size: 14px;
+        line-height: 1.35;
+      }
+
+      caption {
+        padding: 12px 14px;
+        text-align: left;
+        background: var(--soft-2);
+        border-bottom: 1px solid var(--line);
+        font-weight: 800;
+      }
+
+      th, td {
+        padding: 10px 12px;
+        border-right: 1px solid var(--line);
+        border-bottom: 1px solid var(--line);
+        vertical-align: top;
+        text-align: left;
+      }
+
+      th {
+        position: sticky;
+        top: 0;
+        z-index: 1;
+        background: #edf2f5;
+        white-space: nowrap;
+      }
+
+      tbody th {
+        position: static;
+        background: #ffffff;
+        font-weight: 800;
+      }
+
+      td:last-child, th:last-child { border-right: 0; }
+      tr:last-child td, tr:last-child th { border-bottom: 0; }
+      .not-published { background: var(--gap); font-weight: 700; }
+
+      .sources, .backup {
+        margin-top: 20px;
+        max-width: 1120px;
+      }
+
+      .sources h2, .backup h2 {
+        font-size: 18px;
+        margin: 0 0 10px;
+      }
+
+      .sources ol {
+        margin: 0;
+        padding-left: 22px;
+        color: var(--muted);
+        line-height: 1.55;
+      }
+
+      .sources a { color: var(--accent-dark); }
+      footer {
+        margin-top: 24px;
+        padding-top: 16px;
+        border-top: 1px solid var(--line);
+        color: var(--muted);
+        font-size: 13px;
+      }
+
+      @media (max-width: 720px) {
+        header, main { padding-left: 16px; padding-right: 16px; }
+        .answer { font-size: 25px; }
+        table { min-width: 900px; }
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1 class="answer">Anthropic says Claude Code limits depend on how you sign in: subscriptions share Claude and Claude Code usage, while API-key sessions are billed per token instead of using the subscription allowance.</h1>
+      <p class="subline">Claude Code Usage Limit Official Table. Scraped on 2026-09-14. The table keeps values and source IDs separate so the numbers stay readable while each row remains traceable.</p>
+      <div class="bar">
+        <span>Scraped date: 2026-09-14</span>
+        <a class="button" href="./claude-code-usage-limit.csv" download>Download clean CSV</a>
+        <a class="button secondary" href="./claude-code-usage-limit-full-citations.csv" download>Download full citations CSV</a>
+      </div>
+      <nav class="related-pages" aria-label="Related limit tables">
+        <a href="../">Claude usage limit</a>
+        <a href="../codex-usage-limit/">Codex usage limit</a>
+        <a href="../claude-code-usage-limit/">Claude Code usage limit</a>
+        <a href="../gemini-usage-limit/">Gemini usage limit</a>
+      </nav>
+    </header>
+    <main>
+      <div class="table-frame">
+        <table>
+          <caption>Claude Code Usage Limit Official Table</caption>
+          <thead><tr><th>Plan or surface</th><th>Official item</th><th>Published value</th><th>Reset or metering</th><th>Source ID</th></tr></thead>
+          <tbody>
+<tr><th>Claude Code login</th><td>Claude Enterprise seat through /login</td><td>Included usage pool</td><td>Resets on a rolling window</td><td>A1</td></tr>
+<tr><th>Claude Code login</th><td>API key through Console, Bedrock, Vertex, or Microsoft Foundry</td><td>Pay-as-you-go, billed per token</td><td>No hard stop; the account is charged for usage</td><td>A1</td></tr>
+<tr><th>Claude Code login</th><td>Running spend command for API-key use</td><td>/cost</td><td>Shows running spend for the current session</td><td>A1</td></tr>
+<tr><th>Model selection</th><td>Source of truth for available Claude Code models</td><td>/model</td><td>Exact model names, versions, and availability change over time</td><td>A1</td></tr>
+<tr><th>Pro</th><td>Web subscription price</td><td>$20/month in the United States</td><td>Regional pricing may vary</td><td>A3</td></tr>
+<tr><th>Pro</th><td>Usage capacity</td><td>At least 5x the free service per session during peak hours</td><td>Session-based limit resets every five hours; weekly limit resets at a fixed account time</td><td>A3</td></tr>
+<tr><th>Max</th><td>Max 5x price</td><td>$100/month</td><td>Monthly subscription only</td><td>A4</td></tr>
+<tr><th>Max</th><td>Max 20x price</td><td>$200/month</td><td>Monthly subscription only</td><td>A4</td></tr>
+<tr><th>Max</th><td>Usage capacity</td><td>5x or 20x more usage than Pro</td><td>Shared Claude and Claude Code usage limits</td><td>A4, A2</td></tr>
+<tr><th>Team Standard</th><td>Seat price</td><td>$25/member/month monthly; $20/member/month annually</td><td>Minimum two members</td><td>A5</td></tr>
+<tr><th>Team Premium</th><td>Seat price</td><td>$125/member/month monthly; $100/member/month annually</td><td>Minimum two members</td><td>A5</td></tr>
+<tr><th>Team Standard</th><td>Usage capacity</td><td>1.25x more usage per session than Pro</td><td>Weekly limits reset at a fixed account time; per-member limits</td><td>A5</td></tr>
+<tr><th>Team Premium</th><td>Usage capacity</td><td>6.25x more usage per session than Pro</td><td>Weekly limits reset at a fixed account time; per-member limits</td><td>A5</td></tr>
+<tr><th>Team</th><td>Maximum seats before Enterprise upgrade</td><td>150 seats</td><td>Upgrade to Enterprise above that size</td><td>A5</td></tr>
+<tr><th>Enterprise</th><td>Seat fee</td><td>Access only</td><td>All usage across Claude, Claude Code, and Cowork is billed separately at standard API rates</td><td>A6</td></tr>
+<tr><th>Enterprise</th><td>Included token allowance</td><td class="not-published">Not published by Anthropic</td><td>Usage-based Enterprise has no included token allowance and no per-seat usage limits</td><td>A6</td></tr>
+<tr><th>Shared subscription usage</th><td>Pro and Max subscription use</td><td>Shared across Claude and Claude Code</td><td>Wait for reset, enable usage credits, upgrade, or switch to API credits after hitting limits</td><td>A2</td></tr>
+<tr><th>Context window</th><td>Paid Claude plans in Claude Code for listed current models</td><td>Up to 1M tokens</td><td>Availability and usage-credit requirements depend on plan and model</td><td>A8</td></tr>
+<tr><th>Exact fixed message count</th><td>Messages per plan</td><td class="not-published">Not published by Anthropic</td><td>Varies by message length, files, conversation length, model, and feature</td><td>A3, A7</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <section class="sources">
+        <h2>Source Map</h2>
+        <ol>
+<li><strong>A1.</strong> <a href="https://support.claude.com/en/articles/14552983-models-usage-and-limits-in-claude-code">Models, usage, and limits in Claude Code</a>: How usage is metered; Choosing a model; Managing the context window.</li>
+<li><strong>A2.</strong> <a href="https://support.claude.com/en/articles/11145838-use-claude-code-with-your-pro-or-max-plan">Use Claude Code with your Pro or Max plan</a>: How to connect; What happens when you hit usage limits.</li>
+<li><strong>A3.</strong> <a href="https://support.claude.com/en/articles/8325606-what-is-the-pro-plan">What is the Pro plan?</a>: Cost; Usage limits.</li>
+<li><strong>A4.</strong> <a href="https://support.claude.com/en/articles/11049741-what-is-the-max-plan">What is the Max plan?</a>: Key benefits; Pricing tiers.</li>
+<li><strong>A5.</strong> <a href="https://support.claude.com/en/articles/9266767-what-is-the-team-plan">What is the Team plan?</a>: Cost; Usage limits.</li>
+<li><strong>A6.</strong> <a href="https://support.claude.com/en/articles/9797531-what-is-the-enterprise-plan">What is the Enterprise plan?</a>: Pricing; Usage-based pricing.</li>
+<li><strong>A7.</strong> <a href="https://support.claude.com/en/articles/11647753-how-do-usage-and-length-limits-work">How do usage and length limits work?</a>: Usage limits; Length limits.</li>
+<li><strong>A8.</strong> <a href="https://support.claude.com/en/articles/8606394-how-large-is-the-context-window-on-paid-claude-plans">How large is the context window on paid Claude plans?</a>: Context windows on paid plans.</li>
+        </ol>
+      </section>
+      <section class="backup">
+        <h2>Full-Citation Backup</h2>
+        <p class="subline">The full-citation CSV keeps the same rows with page title, URL, section, and evidence note for checking or rebuilding the table.</p>
+      </section>
+      <footer>Data comes from official first-party documentation only. Cells marked as not published are intentionally left unfilled rather than copied from third-party blogs, forums, or estimates.</footer>
+    </main>
+  </body>
+</html>

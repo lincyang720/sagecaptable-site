@@ -1,0 +1,20 @@
+[
+  {
+    "page": "https://usagecaptable.com/codex-usage-limit/",
+    "keyword": "codex usage limit",
+    "serpGap": "A downloadable official-source table that combines plan prices, model-by-model local-message estimates, shared Work/Codex allowance rules, reset guidance, and unpublished cells.",
+    "unpublished": "fixed personal message counts; exact per-account remaining limits; account-specific reset timestamps outside the user dashboard"
+  },
+  {
+    "page": "https://usagecaptable.com/claude-code-usage-limit/",
+    "keyword": "claude code usage limit",
+    "serpGap": "A downloadable official-source table that separates subscription metering, API-key billing, plan multipliers, reset windows, Team seats, Enterprise usage billing, and context-window limits.",
+    "unpublished": "fixed message counts by plan; exact per-account remaining allocation; included token allowance for usage-based Enterprise"
+  },
+  {
+    "page": "https://usagecaptable.com/gemini-usage-limit/",
+    "keyword": "gemini usage limit",
+    "serpGap": "A downloadable official-source table that keeps Gemini app plans, Gemini API tier rules, Batch API limits, and Gemini Code Assist quotas in separate rows instead of mixing them.",
+    "unpublished": "fixed Gemini app prompt counts; exact per-account Gemini app allowance; Gemini app weekly numeric cap; universal model-specific API rate limits outside AI Studio"
+  }
+]

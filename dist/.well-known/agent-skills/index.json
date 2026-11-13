@@ -1,0 +1,12 @@
+{
+  "$schema": "https://schemas.agentskills.io/discovery/0.2.0/schema.json",
+  "skills": [
+    {
+      "name": "usagecaptable-lookup",
+      "type": "skill-md",
+      "description": "Look up official Anthropic Claude plan usage limits from the Claude Usage Limit Official Table.",
+      "url": "https://usagecaptable.com/.well-known/agent-skills/usagecaptable-lookup/SKILL.md",
+      "digest": "sha256:20951b588413824c4e597d7d274f34e7dbbdb3acf597dbe4cac94ca4364efe24"
+    }
+  ]
+}

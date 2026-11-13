@@ -1,0 +1,24 @@
+{
+  "name": "Claude Usage Limit Official Table",
+  "version": "1.0.0",
+  "description": "Agent-to-agent card for the official Claude usage-limit reference dataset.",
+  "supportedInterfaces": [
+    {
+      "url": "https://usagecaptable.com/mcp",
+      "transport": "streamable-http"
+    }
+  ],
+  "capabilities": {
+    "tools": [
+      "usagecaptable_lookup"
+    ],
+    "streaming": false
+  },
+  "skills": [
+    {
+      "id": "usagecaptable_lookup",
+      "name": "Usage limit lookup",
+      "description": "Look up official Claude plan usage limits by plan."
+    }
+  ]
+}
